@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .buttons{
+            display: flex;
+            gap: 20px;
+        }
+        .scores{
+            display: flex;
+            gap: 200px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        button:hover{
+            font-size: 70px;
+        }
+        p{
+            font-weight: bolder;
+            font-size: 12px;
+        }
+        span{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 3px;
+        }
+        #result{
+            margin-top:30px;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+            font-weight: bolder;
+        }
+    </style>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+    <div class="container">
+        <div class="scores">
+            <p>You <span id="humanScore">0</span></p>
+            <p>Computer <span id="computerScore">0</span></p>
+        </div>
+        <div class="buttons">
+            <button id="rock">&#9994</button>
+            <button id="paper">&#9995</button>
+            <button id="scissors">✌️</button>
+        </div>
+        <div id="result">Get 5 point to win</div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
